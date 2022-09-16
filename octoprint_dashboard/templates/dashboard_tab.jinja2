@@ -2,19 +2,19 @@
  * OctoPrint-Dashboard
  *
  * Authors: Jefferey Neuffer (https://github.com/j7126), Will MacCormack (https://github.com/willmac16), Stefan Cohen (https://github.com/StefanCohen)
- * 
+ *
  * Copyright (C) 2021
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as
  * published by the Free Software Foundation, either version 3 of the
  * License, or (at your option) any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU Affero General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 -->
@@ -569,7 +569,7 @@
     <div class="dashboardGridItem file"
       data-bind="visible: (!dashboardSettings.printingOnly_FileName() || printerStateModel.isPrinting()) && dashboardSettings.showFileName() && fsFileName()">
       <img class="dashboardIcon" src="plugin/dashboard/static/img/file-icon.png">
-      <span id="fileInfo" title="{{ _('File') }}" data-bind="html: printerStateModel.filedisplay()"></span>
+      <span id="fileInfo" class="fileName" title="{{ _('File') }}" data-bind="html: printerStateModel.filedisplay()"></span>
     </div>
 
     <div class="dashboardGridItem thumbnailContainer"

@@ -2,19 +2,19 @@
  * OctoPrint-Dashboard
  *
  * Authors: Jefferey Neuffer (https://github.com/j7126), Will MacCormack (https://github.com/willmac16), Stefan Cohen (https://github.com/StefanCohen)
- * 
+ *
  * Copyright (C) 2021
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as
  * published by the Free Software Foundation, either version 3 of the
  * License, or (at your option) any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU Affero General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
@@ -53,6 +53,18 @@
     float: unset;
     width: 50%;
 }
+
+.dashboardGridItem.file {
+    display: flex;
+    align-items: center;
+}
+
+.dashboardGridItem.file .fileName {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 
 .progressContainer div {
     margin: 0 auto;
@@ -335,7 +347,7 @@ div.inline {
 }
 
 .dashboard-full .webcam_rotated .webcam_fixed_ratio.ratio169 {
-    padding-bottom: 0px!important;
+    padding-bottom: 0px !important;
     max-width: 100%;
     max-height: 100%;
     height: calc(100vh - 4vmin);
@@ -345,7 +357,7 @@ div.inline {
 }
 
 .dashboard-full .webcam_rotated .webcam_fixed_ratio.ratio43 {
-    padding-bottom: 0px!important;
+    padding-bottom: 0px !important;
     max-width: 100%;
     max-height: 100%;
     height: calc(100vh - 4vmin);
@@ -357,21 +369,21 @@ div.inline {
 .dashboard-full .webcam_unrotated .webcam_fixed_ratio.ratio169 {
     width: var(--dashboard_full_webcam_width);
     height: calc(var(--dashboard_full_webcam_width) * 0.5625);
-    padding-bottom: 0px!important;
+    padding-bottom: 0px !important;
     margin-top: calc((100vh - 4vmin) / 2 - (var(--dashboard_full_webcam_width) * 0.5625) / 2);
 }
 
 .dashboard-full .webcam_unrotated .webcam_fixed_ratio.ratio43 {
     width: var(--dashboard_full_webcam_width);
     height: calc(var(--dashboard_full_webcam_width) * 0.75);
-    padding-bottom: 0px!important;
+    padding-bottom: 0px !important;
     margin-top: calc((100vh - 4vmin) / 2 - (var(--dashboard_full_webcam_width) * 0.75) / 2);
 }
 
 .dashboard-full.dashboardOverlayFull .webcam_unrotated .webcam_fixed_ratio.ratio43 {
     height: 100vh;
     width: calc(100vh * 1.33);
-    padding-bottom: 0px!important;
+    padding-bottom: 0px !important;
     position: relative;
     margin: auto;
 }
@@ -383,12 +395,14 @@ div.inline {
         text-align: center;
         margin-bottom: 20px;
         padding-bottom: 10px;
-        border-bottom: solid 1px grey!important;
+        border-bottom: solid 1px grey !important;
     }
+
     #touch .dashboardGridItem>span::before {
         content: "\A";
         white-space: pre;
     }
+
     #touch .dashboardGridItem>div.inline {
         display: block;
         margin-top: 10px;
@@ -397,10 +411,10 @@ div.inline {
 }
 
 #touch input#dashboard_fullScreenIcon, #touch input#dashboard_fullWindowIcon, #touch input#dashboard_toggleWebcamIcon {
-    height: 18px!important;
-    background: none!important;
-    color: white!important;
-    opacity: 1!important;
+    height: 18px !important;
+    background: none !important;
+    color: white !important;
+    opacity: 1 !important;
 }
 
 /* FullScreen.*/
@@ -486,7 +500,7 @@ div.inline {
 .dashboardContainer.dashboard-full {
     --dashboard_full_content_width: 40vw;
     --dashboard_full_webcam_width: 60vw;
-    color: #dadadc!important;
+    color: #dadadc !important;
     font-weight: 400;
     background-color: #000000;
     user-select: none;
@@ -496,7 +510,7 @@ div.inline {
     top: 0px;
     left: 0px;
     z-index: 100000;
-    margin-top: 0!important;
+    margin-top: 0 !important;
 }
 
 .dashboardContainer.dashboard-full.dashboard_full_ratio43_rotated {
@@ -610,7 +624,7 @@ body:fullscreen .ui-pnotify {
 }
 
 .dashboardContainer.dashboard-full .dashboardGridItem.printerMessage {
-    margin-bottom: 0px!important;
+    margin-bottom: 0px !important;
 }
 
 .dashboard-full .printerMessage>br {
@@ -658,5 +672,5 @@ button.dashboardButton#job_cancel>span>span {
 }
 
 .dashboardContainer.dashboard-full #layerWarning {
-    display: none!important;
+    display: none !important;
 }
